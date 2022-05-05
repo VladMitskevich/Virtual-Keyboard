@@ -1,6 +1,6 @@
 @import url("normalize.css");
 .body{
-    background-color: rgba(45, 224, 218, 0.723);
+    background-color: rgb(0, 0, 0);
 }
 .wrapper{
     min-height: 100%;
@@ -16,30 +16,49 @@
   align-items: center;
 }
 .title{
+    letter-spacing: 0.2em;
+    text-shadow: 1px 1px rgba(21, 255, 21, 1), -1px 1px rgba(21, 255, 21, 1), -1px -1px rgba(21, 255, 21, 1), 1px -1px rgba(21, 255, 21, 1);
+    text-shadow: 0px 0px 50px 0px rgba(21, 255, 21, 1);
     color: rgb(78, 237, 21);
 }
 textarea{
-    background-color: rgb(186, 250, 247);
+    resize: none;
+    color: rgba(21, 255, 21, 1);
+    background-color: rgb(0, 0, 0);
+    width: 500px;
+    height: 100px;
+    border: 2px solid rgba(21, 255, 21, 1);
+}
+textarea :active{
+    border: 2px solid rgba(21, 255, 21, 1);
 }
 .keyboard{
+    border-radius: 10px;
     position: absolute;   
-    top: 25%;
-    width: 1100px;
-    background-color: rgb(0, 85, 255);
-    height: 300px;
+    margin-top: 600px;
+    width: 950px;
+    background-color: rgb(0, 0, 0);
+    height: 263px;
+    box-shadow: 0px 0px 50px 0px rgba(21, 255, 21, 1);
+    user-select: none;
 }
 .keyboard-keys{
+    padding: 4px 0px;
     text-align: center;
 }
 .keyboard-key{
+    color: #fff;
     height: 45px;
     width: 6%;
     max-width: 90px;
     margin: 3px;
     padding: 0;
-    border: none;
+    border: 2px solid rgb(21, 255, 21);
+    border-bottom: 5px solid rgb(21, 255, 21);
+    border-left: 3px solid rgb(21, 255, 21);
+    border-right: 3px solid rgb(21, 255, 21);
     border-radius: 7px;
-    background-color: blueviolet;
+    background-color: rgb(0, 0, 0);
     font-size: 1.1rem; 
     cursor: pointer;
     display: inline-flex;
@@ -47,7 +66,43 @@ textarea{
     justify-content: center;
     vertical-align: top;
     position: relative;
+    transition: all 0.2s ease 0s;
 }
 .wide-key{
-    width: 12%;
+    max-width: 110px;
+    width: 25%;
+}
+.super-wide-key{
+    max-width: 115px;
+    width: 24%;
+}
+.space-key{
+    max-width: 350px;
+    width: 40%;
+}
+.delete-key{
+    max-width: 80px;
+    width: 5%;
+}
+.shift-key{
+    max-width: 115px;
+    width: 10%;
+}
+.shiftRight-key{
+    max-width: 134px;
+    width: 28%;
+}
+.ctrl-key{
+    max-width: 118px;
+    width: 24%;
+}
+.ctrlRight-key{
+    max-width: 70px;
+    width: 24%;
+}
+.keyboard-key.active{
+    height: 41px;
+    border-bottom: 3px solid rgba(21, 255, 21, 1);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 5px 0px rgba(21, 255, 21, 1);
 }

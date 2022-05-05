@@ -1,86 +1,29 @@
-const body = document.querySelector('body');
-body.classList.add('body');
-// body.innerHTML = `<div class="wrapper">
-// <h1>RSS Virtual Keyboard</h1>
-// <textarea></textarea>
-// <div class="keyboard"><div class="keyboard-keys">
-// <button type="button" class="keyboard-key">\`</button>
-// <button type="button" class="keyboard-key">1</button>
-// <button type="button" class="keyboard-key">2</button>
-// <button type="button" class="keyboard-key">3</button>
-// <button type="button" class="keyboard-key">4</button>
-// <button type="button" class="keyboard-key">5</button>
-// <button type="button" class="keyboard-key">6</button>
-// <button type="button" class="keyboard-key">7</button>
-// <button type="button" class="keyboard-key">8</button>
-// <button type="button" class="keyboard-key">9</button>
-// <button type="button" class="keyboard-key">0</button>
-// <button type="button" class="keyboard-key">-</button>
-// <button type="button" class="keyboard-key">=</button>
-// <button type="button" class="keyboard-key wide-key">Backspace</button>  
-// <br>
-// <button type="button" class="keyboard-key wide-key">Tab</button>
-// <button type="button" class="keyboard-key">q</button>
-// <button type="button" class="keyboard-key">w</button>
-// <button type="button" class="keyboard-key">e</button>
-// <button type="button" class="keyboard-key">r</button>
-// <button type="button" class="keyboard-key">t</button>
-// <button type="button" class="keyboard-key">y</button>
-// <button type="button" class="keyboard-key">u</button>
-// <button type="button" class="keyboard-key">i</button>
-// <button type="button" class="keyboard-key">o</button>
-// <button type="button" class="keyboard-key">p</button>
-// <button type="button" class="keyboard-key">[</button>
-// <button type="button" class="keyboard-key">]</button>
-// <button type="button" class="keyboard-key">\\</button>
-// <br>
-// <button type="button" class="keyboard-key wide-key">Caps Lock</button>
-// <button type="button" class="keyboard-key">a</button>
-// <button type="button" class="keyboard-key">s</button>
-// <button type="button" class="keyboard-key">d</button>
-// <button type="button" class="keyboard-key">f</button>
-// <button type="button" class="keyboard-key">g</button>
-// <button type="button" class="keyboard-key">h</button>
-// <button type="button" class="keyboard-key">j</button>
-// <button type="button" class="keyboard-key">k</button>
-// <button type="button" class="keyboard-key">l</button>
-// <button type="button" class="keyboard-key">;</button>
-// <button type="button" class="keyboard-key">'</button>
-// <button type="button" class="keyboard-key wide-key">Enter</button>
-// <br>
-// <button type="button" class="keyboard-key wide-key">Shift</button>
-// <button type="button" class="keyboard-key">z</button>
-// <button type="button" class="keyboard-key">x</button>
-// <button type="button" class="keyboard-key">c</button>
-// <button type="button" class="keyboard-key">v</button>
-// <button type="button" class="keyboard-key">b</button>
-// <button type="button" class="keyboard-key">n</button>
-// <button type="button" class="keyboard-key">m</button>
-// <button type="button" class="keyboard-key">,</button>
-// <button type="button" class="keyboard-key">.</button>
-// <button type="button" class="keyboard-key">/</button> 
-// <button type="button" class="keyboard-key wide-key">Shift</button>
-// <br>
-// <button type="button" class="keyboard-key">Ctrl</button>
-// <button type="button" class="keyboard-key">Win</button>
-// <button type="button" class="keyboard-key">Alt</button>
-// <button type="button" class="keyboard-key">Space</button>
-// <button type="button" class="keyboard-key">Alt</button>
-// <button type="button" class="keyboard-key">Leftarr</button> 
-// <button type="button" class="keyboard-key">Botarr</button>
-// <button type="button" class="keyboard-key">Rightarr</button>
-// <button type="button" class="keyboard-key">Ctrl</button>
+window.addEventListener("DOMContentLoaded", function() {
+  let buttons = ['`','1','2','3','4','5','6','7','8','9','0','-','=','Backspace',
+                 'Tab','q','w','e','r','t','y','u','i','o','p','[',']','\\','Delete',
+                'CapsLock','a','s','d','f','g','h','j','k','l',';','\'','Enter',
+                'ShiftLeft','z','x','c','v','b','n','m',',','.','/','ArrowUp','ShiftRight',
+                'ControlLeft','Meta','AltLeft','Space','AltRight','ArrowLeft','ArrowDown','ArrowRight','ControlRight'];
 
-// </div>
-// </div>
-// </div>`
-const buttons = ['`','1','2','3','4','5','6','7','8','9','0','-','=','Backspace',
-                 'Tab','q','w','e','r','t','y','u','i','o','p','[',']','\\',
-                'Caps Lock','a','s','d','f','g','h','j','k','l',';','\'','Enter',
-                'Shift','z','x','c','v','b','n','m',',','.','Arrup','Shift',
-                'Ctrl','Win','Alt','Space','Alt','Arrleft','Arrdown','Arrright','Ctrl'];
 
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener('keydown', (event)=>{
+        if(event.shiftKey && event.altKey){
+          buttons = ['`','1','2','3','4','5','6','7','8','9','0','-','=','Backspace',
+                 'Tab','й','ц','у','к','е','н','г','ш','щ','з','х','ъ','\\',
+                'CapsLock','ф','ы','в','а','п','р','о','л','д','ж','э','Enter',
+                'ShiftLeft','я','ч','с','м','и','т','ь','б','ю','ArrowUp','ShiftRight',
+                'ControlLeft','Meta','AltLeft','Space','AltRight','ArrowLeft','ArrowDown','ArrowRight','ControlRight'];
+                console.log(buttons);
+        }
+        
+      })              
+  const body = document.querySelector('body');
+  body.classList.add('body');
+
+  const createIcon = (icon_name) => {
+    return `<i class="material-icons">${icon_name}</i>`;
+};
+  
    const wrapper =  document.createElement('div');
    wrapper.classList.add('wrapper');
    body.appendChild(wrapper);
@@ -100,7 +43,148 @@ document.addEventListener("DOMContentLoaded", () => {
    keyboard.appendChild(keyboardKeys);
 
    function addButtons(){
-     let button = document.createElement('button');
-     button.classList.add('keyboard-key')
+    
+    for(let i= 0;i<buttons.length;i++){
+      const key = document.createElement('button');
+      const buttonsLineBreak = ['Backspace','Delete','Enter', 'ShiftRight'].indexOf(buttons[i]) !== -1;
+
+      
+      key.setAttribute("type", "button");
+      key.classList.add('keyboard-key');
+      key.textContent = buttons[i];
+      if(buttons[i] === 'Backspace'){
+        key.classList.add('wide-key');  
+        key.innerHTML = createIcon("backspace");
+      }
+      if(buttons[i] === 'Tab'){
+        key.innerHTML = createIcon("keyboard_tab");
+      }
+      if(buttons[i] === 'Delete'){
+        key.classList.add('delete-key');
+        key.textContent = 'Del';
+      }
+      if(buttons[i] === 'CapsLock'){
+        key.innerHTML = createIcon("keyboard_capslock");
+        key.classList.add('super-wide-key');
+      }
+      if(buttons[i] === 'Enter'){
+        key.classList.add('super-wide-key');
+      }
+      if(buttons[i] === 'AltLeft' || buttons[i] === 'AltRight'){
+        key.textContent = 'Alt';
+      }
+      if(buttons[i] === 'ArrowRight'){
+        key.innerHTML = createIcon("keyboard_arrow_right");
+      }
+      if(buttons[i] === 'ArrowLeft'){
+        key.innerHTML = createIcon("keyboard_arrow_left");
+      }
+      if(buttons[i] === 'ArrowDown'){
+        key.innerHTML = createIcon("keyboard_arrow_down");
+      }
+      if(buttons[i] === 'ArrowUp'){
+        key.innerHTML = createIcon("keyboard_arrow_up");
+      }
+      if(buttons[i] === 'Space'){
+        key.classList.add('space-key')
+        key.innerHTML = createIcon("space_bar");
+      }
+      if(buttons[i] === 'ShiftLeft'){
+        key.classList.add('shift-key')
+        key.textContent = 'Shift';
+      }
+      if(buttons[i] === 'ShiftRight'){
+        key.classList.add('shiftRight-key')
+        key.textContent = 'Shift';
+      }
+      if(buttons[i] === 'ControlLeft'){
+        key.classList.add('ctrl-key')
+        key.textContent = 'Ctrl';
+      }
+      if(buttons[i] === 'ControlRight'){
+        key.classList.add('ctrlRight-key')
+        key.textContent = 'Ctrl';
+      }
+      if(buttons[i] === 'Enter'){ 
+        key.innerHTML = createIcon("keyboard_return");
+      }
+      if(buttons[i] === 'Meta'){ 
+        key.textContent = 'Win';
+      }
+
+      keyboardKeys.append(key);
+      if(buttonsLineBreak){
+        keyboardKeys.appendChild(document.createElement('br'));
+      }
+
+      //----------------------Чтение кнопок с клавиатуры----------------------------//
+
+      document.addEventListener('keydown', (event)=>{
+        if(event.key === buttons[i] || event.code === buttons[i]){
+          key.classList.toggle("active");
+          if(event.key === 'Backspace'){
+            textarea.textContent = textarea.textContent.substring(0, textarea.textContent.length-1);
+          }
+          else if(event.key === 'Enter'){
+            textarea.textContent += "\n";
+          }
+          else if(event.key === 'Delete'){
+            textarea.textContent = '';
+          }
+          else if(event.code === 'Space'){
+            textarea.textContent += ' ';
+          }
+          else if(event.key === 'Tab'){
+            textarea.textContent += '   ';
+          }
+          else if(buttons[i] === 'CapsLock' || buttons[i] === 'ControlRight' || buttons[i] === 'ControlLeft'|| buttons[i] === 'ShiftRight' || buttons[i] === 'ShiftLeft' || buttons[i] === 'AltRight' || buttons[i] === 'AltLeft' || buttons[i] === 'Meta' || buttons[i] === 'ArrowDown' || buttons[i] === 'ArrowUp' || buttons[i] === 'ArrowLeft' || buttons[i] === 'ArrowRight'){
+            textarea.textContent = textarea.textContent;
+            event.preventDefault();
+          }
+          else{
+            textarea.textContent += buttons[i];
+          }
+        }
+        
+      })
+      document.addEventListener('keyup', ()=>{
+        key.classList.remove('active');
+      })
+
+      //--------------------------------Чтение кнопок на экране--------------------//
+
+      key.addEventListener('mousedown', () =>{
+        key.classList.toggle('active');
+        if(buttons[i] === 'Backspace'){
+          textarea.textContent = textarea.textContent.substring(0, textarea.textContent.length-1);
+        }
+        else if(buttons[i] === 'Enter'){
+          textarea.textContent += "\n";
+        }
+        else if(buttons[i]=== 'Space'){
+          textarea.textContent += ' ';
+        }
+        else if(buttons[i] === 'Delete'){
+          textarea.textContent = '';
+        }
+        else if(buttons[i]=== 'Tab'){
+          textarea.textContent += '   ';
+        }
+        else if(buttons[i] === 'CapsLock' || buttons[i] === 'ControlRight' || buttons[i] === 'ControlLeft' || buttons[i] === 'ShiftRight' || buttons[i] === 'ShiftLeft' || buttons[i] === 'AltRight' || buttons[i] === 'AltLeft' || buttons[i] === 'Meta' || buttons[i] === 'ArrowDown' || buttons[i] === 'ArrowUp' || buttons[i] === 'ArrowLeft' || buttons[i] === 'ArrowRight'){
+          textarea.textContent = textarea.textContent;
+        }
+        else{
+          textarea.textContent += buttons[i];
+        }
+      })
+      key.addEventListener('mouseup', ()=> {
+        key.classList.remove('active');
+      })
+      
+    };
+      
+
    }
+   addButtons();
+   
 })
