@@ -45,6 +45,7 @@ textarea :active{
 .keyboard-keys{
     padding: 4px 0px;
     text-align: center;
+    max-height: 263px;
 }
 .keyboard-key{
     color: #fff;
