@@ -209,8 +209,20 @@ window.addEventListener("DOMContentLoaded", function() {
         else if(condition[i]=== 'Tab'){
           textarea.textContent += '   ';
         }
-        else if(condition[i] === 'CapsLock' || condition[i] === 'ControlRight' || condition[i] === 'ControlLeft' || condition[i] === 'ShiftRight' || condition[i] === 'ShiftLeft' || condition[i] === 'AltRight' || condition[i] === 'AltLeft' || condition[i] === 'Meta' || condition[i] === 'ArrowDown' || condition[i] === 'ArrowUp' || condition[i] === 'ArrowLeft' || condition[i] === 'ArrowRight'){
+        else if(condition[i] === 'CapsLock' || condition[i] === 'ControlRight' || condition[i] === 'ControlLeft' || condition[i] === 'ShiftRight' || condition[i] === 'ShiftLeft' || condition[i] === 'AltRight' || condition[i] === 'AltLeft' || condition[i] === 'Meta') {
           textarea.textContent += '';
+        }
+        else if(condition[i] === 'ArrowRight'){
+          textarea.textContent += '▷';
+        }
+        else if(condition[i] === 'ArrowLeft'){
+          textarea.textContent += '◁';
+        }
+        else if(condition[i] === 'ArrowUp'){
+          textarea.textContent += '△';
+        }
+        else if(condition[i] === 'ArrowDown'){
+          textarea.textContent += '▽';
         }
         else{
           textarea.textContent += condition[i];
