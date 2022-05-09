@@ -32,6 +32,18 @@ textarea{
 textarea :active{
     border: 2px solid rgba(21, 255, 21, 1);
 }
+.info{
+    letter-spacing: 0.03em;
+    margin-top: 10px;
+    color: rgba(21, 255, 21, 1);
+    font-size: 20px;
+}
+.langinfo{
+    letter-spacing: 0.05em;
+    margin-top: 10px;
+    color: rgba(21, 255, 21, 1);
+    font-size: 20px;
+}
 .keyboard{
     border-radius: 10px;
     position: absolute;   
@@ -68,6 +80,9 @@ textarea :active{
     vertical-align: top;
     position: relative;
     transition: all 0.2s ease 0s;
+}
+.keyboard-key:hover{
+    transform: scale(0.97);
 }
 .wide-key{
     max-width: 110px;
