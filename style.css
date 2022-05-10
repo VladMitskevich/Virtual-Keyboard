@@ -1,0 +1,124 @@
+@import url("normalize.css");
+.body{
+    background-color: rgb(0, 0, 0);
+}
+.wrapper{
+    min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.title{
+    letter-spacing: 0.2em;
+    text-shadow: 1px 1px rgba(21, 255, 21, 1), -1px 1px rgba(21, 255, 21, 1), -1px -1px rgba(21, 255, 21, 1), 1px -1px rgba(21, 255, 21, 1);
+    text-shadow: 0px 0px 50px 0px rgba(21, 255, 21, 1);
+    color: rgb(78, 237, 21);
+}
+textarea{
+    resize: none;
+    color: rgba(21, 255, 21, 1);
+    background-color: rgb(0, 0, 0);
+    width: 500px;
+    height: 100px;
+    border: 2px solid rgba(21, 255, 21, 1);
+}
+textarea :active{
+    border: 2px solid rgba(21, 255, 21, 1);
+}
+.info{
+    letter-spacing: 0.03em;
+    margin-top: 10px;
+    color: rgba(21, 255, 21, 1);
+    font-size: 20px;
+}
+.langinfo{
+    letter-spacing: 0.05em;
+    margin-top: 10px;
+    color: rgba(21, 255, 21, 1);
+    font-size: 20px;
+}
+.keyboard{
+    border-radius: 10px;
+    position: absolute;   
+    margin-top: 600px;
+    width: 950px;
+    background-color: rgb(0, 0, 0);
+    height: 263px;
+    box-shadow: 0px 0px 50px 0px rgba(21, 255, 21, 1);
+    user-select: none;
+}
+.keyboard-keys{
+    padding: 4px 0px;
+    text-align: center;
+    max-height: 263px;
+}
+.keyboard-key{
+    color: #fff;
+    height: 45px;
+    width: 6%;
+    max-width: 90px;
+    margin: 3px;
+    padding: 0;
+    border: 2px solid rgb(21, 255, 21);
+    border-bottom: 5px solid rgb(21, 255, 21);
+    border-left: 3px solid rgb(21, 255, 21);
+    border-right: 3px solid rgb(21, 255, 21);
+    border-radius: 7px;
+    background-color: rgb(0, 0, 0);
+    font-size: 1.1rem; 
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: top;
+    position: relative;
+    transition: all 0.2s ease 0s;
+}
+.keyboard-key:hover{
+    transform: scale(0.97);
+}
+.wide-key{
+    max-width: 110px;
+    width: 25%;
+}
+.super-wide-key{
+    max-width: 115px;
+    width: 24%;
+}
+.space-key{
+    max-width: 350px;
+    width: 40%;
+}
+.delete-key{
+    max-width: 80px;
+    width: 5%;
+}
+.shift-key{
+    max-width: 115px;
+    width: 10%;
+}
+.shiftRight-key{
+    max-width: 134px;
+    width: 28%;
+}
+.ctrl-key{
+    max-width: 118px;
+    width: 24%;
+}
+.ctrlRight-key{
+    max-width: 70px;
+    width: 24%;
+}
+.keyboard-key.active{
+    height: 41px;
+    border-bottom: 3px solid rgba(21, 255, 21, 1);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 5px 0px rgba(21, 255, 21, 1);
+}
