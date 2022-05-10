@@ -234,7 +234,11 @@ window.addEventListener("DOMContentLoaded", function() {
       }
     }
   
-   addButtons(buttons);
+   if(lang === 'ru'){
+     addButtons(rusButtons);
+   }else{
+     addButtons(buttons);
+   }
   
   
 
